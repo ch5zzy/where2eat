@@ -15,7 +15,7 @@ var rooms = {};
 async function getRestaurants(query, roomID, num, maxPrice) {
   console.log(query);
 
-  var request = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + query + " near me&opennow&maxprice=" + maxPrice + "&location=" + rooms[roomID].lat + "," + rooms[roomID].long + "&key=AIzaSyDhvS8Taz5XMYMB4SQsTgzeCYZqHNUTRVM";
+  var request = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + query + " near me&opennow&maxprice=" + maxPrice + "&location=" + rooms[roomID].lat + "," + rooms[roomID].long + "&key=API_KEY_HERE";
   console.log(request);
   const res = await fetch(request);
   const restaurants = await res.json();
